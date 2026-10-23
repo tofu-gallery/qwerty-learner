@@ -1,3 +1,4 @@
+// Modified by Tofu on 2026-10-23: link this copy's source in place of the upstream site's ICP filing; serve the bundled community image.
 import { DonatingCard } from '../DonatingCard'
 import { StickerButton } from '../DonatingCard/components/StickerButton'
 import redBookCode from '@/assets/redBook-code.jpg'
@@ -118,7 +119,7 @@ const Footer: React.FC = () => {
         <br />
         <p className="text-sm text-gray-500  dark:text-gray-400">再次感谢您的支持和关注！</p>
         <br />
-        <img className="ml-1 w-2/6 " src="https://qwerty.kaiyi.cool/weChat-group.png" alt="weChat-group" />
+        <img className="ml-1 w-2/6 " src="/weChat-group.png" alt="weChat-group" />
         <br />
       </InfoPanel>
 
@@ -235,11 +236,11 @@ const Footer: React.FC = () => {
 
         <a
           className="cursor-pointer text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-          href="https://beian.miit.gov.cn"
+          href="https://github.com/tofu-gallery/qwerty-learner/tree/pin/2026-10-23"
           target="_blank"
           rel="noreferrer"
         >
-          鲁ICP备2022030649号
+          Source (GPL-3.0)
         </a>
         <span className="select-none rounded bg-slate-200 px-1 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-400">
           Build <span className="select-all">{LATEST_COMMIT_HASH}</span>
