@@ -1,3 +1,4 @@
+// Modified by Tofu on 2026-10-23: keep upstream callers compatible without sending telemetry.
 import type { TypingState } from '@/pages/Typing/store/type'
 import {
   currentChapterAtom,
@@ -11,7 +12,7 @@ import {
 import type { InfoPanelType } from '@/typings'
 import type { PronunciationType } from '@/typings'
 import { useAtomValue } from 'jotai'
-import mixpanel from 'mixpanel-browser'
+import mixpanel from './disabledTelemetry'
 import { useCallback } from 'react'
 
 export type starAction = 'star' | 'dismiss'
