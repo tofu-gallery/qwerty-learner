@@ -2,6 +2,7 @@
   "name": "qwerty-learner",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "homepage": ".",
   "dependencies": {
     "@floating-ui/react": "^0.20.1",
@@ -58,7 +59,8 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "cross-env CI=false vite build --base=./",
+    "build": "cross-env CI=false vite build --base=/",
+    "preview": "vite preview",
     "test": "echo \"No tests\"",
     "test:e2e": "playwright test",
     "lint": "eslint .",

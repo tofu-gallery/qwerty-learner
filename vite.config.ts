@@ -1,3 +1,4 @@
+// Modified by Tofu on 2026-10-23: portable archive builds and the standard Vite output directory.
 import react from '@vitejs/plugin-react'
 import { promises as fs } from 'fs'
 import { getLastCommit } from 'git-last-commit'
@@ -12,7 +13,7 @@ import type { PluginOption } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig(async ({ mode }) => {
   const latestCommitHash = await new Promise<string>((resolve) => {
-    return getLastCommit((err, commit) => (err ? 'unknown' : resolve(commit.shortHash)))
+    return getLastCommit((err, commit) => resolve(err ? 'unknown' : commit.shortHash))
   })
   return {
     plugins: [
@@ -30,7 +31,7 @@ export default defineConfig(async ({ mode }) => {
     ],
     build: {
       minify: true,
-      outDir: 'build',
+      outDir: 'dist',
       sourcemap: false,
     },
     esbuild: {

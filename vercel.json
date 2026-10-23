@@ -1,0 +1,7 @@
+{
+  "framework": "vite",
+  "installCommand": "yarn install --frozen-lockfile --non-interactive",
+  "buildCommand": "yarn build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
